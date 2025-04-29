@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovani Daniel Nolasco Negrete - Portfolio</title>
+    <style>
+        :root {
+            --primary: #0a66c2;
+            --secondary: #2d3e50;
+            --light: #f5f5f5;
+            --dark: #333;
+            --accent: #5cb85c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 1rem;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .profile-initials {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin: 1rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .experience-date, .education-date {
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        
+        .experience-title, .education-degree {
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .skill-item {
+            background-color: var(--light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid #ddd;
+        }
+        
+        .publications-list, .certifications-list {
+            list-style-type: none;
+        }
+        
+        .publications-list li, .certifications-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .publications-list li:before, .certifications-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .language-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .language-name {
+            width: 100px;
+            font-weight: bold;
+        }
+        
+        .language-level {
+            background-color: var(--light);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            color: var(--secondary);
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="profile-pic">
+                <div class="profile-initials">GN</div>
+            </div>
+            <h1>Geovani Daniel Nolasco Negrete</h1>
+            <p class="tagline">Docente • Investigador • Desarrollador de IA</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>246-1604773</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>daniielnegrethe24@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Puebla, México</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section" id="about">
+            <h2>Perfil Profesional</h2>
+            <p>Docente responsable con dominio de tecnologías y estrategias educativas. Apasionado y motivado, siempre en búsqueda de la excelencia. Cuento con 6 años de experiencia docente, especializándome en Matemáticas, Programación y Ciencias.</p>
+            <p>Actualmente me desempeño como docente y desarrollador en Inteligencia Artificial, combinando mi pasión por la educación con la innovación tecnológica.</p>
+        </section>
+        
+        <section class="section" id="experience">
+            <h2>Experiencia Profesional</h2>
+            
+            <div class="experience-item">
+                <div class="experience-date">Actualidad</div>
+                <div class="experience-title">Desarrollador en Inteligencia Artificial</div>
+                <div class="experience-company">OOHE TECHNOLOGIES</div>
+                <p>Creación de modelos predictivos, chatbots y asistentes personales.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-date">2023 - Actualidad</div>
+                <div class="experience-title">Docente</div>
+                <div class="experience-company">COLEGIO ALEMÁN - FREINET</div>
+                <p>Creación de planes y programas. Docente de Programación y Matemáticas.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-date">2018 - 2024</div>
+                <div class="experience-title">Docente</div>
+                <div class="experience-company">CECYTE TLAXCALA</div>
+                <p>Docente de Matemáticas, Física y Dibujo Técnico.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-date">Nov 2017 - Jun 2018</div>
+                <div class="experience-title">Control de Calidad</div>
+                <div class="experience-company">AMATECH</div>
+                <p>Comunicar información de control de calidad a todos los departamentos pertinentes de la organización.</p>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-date">2017</div>
+                <div class="experience-title">Técnico de Mantenimiento</div>
+                <div class="experience-company">RASSINI FRENOS</div>
+                <p>Verificar y supervisar el correcto funcionamiento de maquinaria. Inspeccionar o probar piezas de máquinas dañadas.</p>
+            </div>
+        </section>
+        
+        <section class="section" id="education">
+            <h2>Formación Académica</h2>
+            
+            <div class="education-item">
+                <div class="education-date">Mar 2023 - Actualidad</div>
+                <div class="education-degree">Doctorado en Educación Matemática</div>
+                <div class="education-school">Benemérita Universidad Autónoma de Puebla</div>
+                <p>Especialidad: Neurocognición y Modelización</p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-date">Ene 2022 - Actualidad</div>
+                <div class="education-degree">Maestría en Inteligencia Artificial</div>
+                <div class="education-school">Universidad Internacional de la Rioja España en México</div>
+                <p>Especialidad: Análisis de datos</p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-date">2018 - 2020</div>
+                <div class="education-degree">Maestría en Educación Matemática</div>
+                <div class="education-school">Benemérita Universidad Autónoma de Puebla</div>
+                <p>Especialidad: Modelización</p>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-date">2015 - 2017</div>
+                <div class="education-degree">Ingeniería Mecatrónica</div>
+                <div class="education-school">Universidad Politécnica de Tlaxcala</div>
+                <p>Especialidad: Automatización y Control</p>
+            </div>
+        </section>
+        
+        <section class="section" id="skills">
+            <h2>Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-item">Matemáticas</div>
+                <div class="skill-item">Programación en C</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">Divulgación Científica</div>
+                <div class="skill-item">Paquetería Office</div>
+                <div class="skill-item">Estrategias de enseñanza</div>
+                <div class="skill-item">Inteligencia Artificial</div>
+                <div class="skill-item">Modelación Matemática</div>
+                <div class="skill-item">Desarrollo de Software</div>
+            </div>
+            
+            <h3>Idiomas</h3>
+            <div class="language-item">
+                <span class="language-name">Español:</span>
+                <span class="language-level">Nativo</span>
+            </div>
+            <div class="language-item">
+                <span class="language-name">Inglés:</span>
+                <span class="language-level">B2</span>
+            </div>
+            <div class="language-item">
+                <span class="language-name">Francés:</span>
+                <span class="language-level">Básico</span>
+            </div>
+        </section>
+        
+        <section class="section" id="certifications">
+            <h2>Certificaciones y Diplomados</h2>
+            <ul class="certifications-list">
+                <li><strong>Data y Business Analytics</strong> - MIU City University Miami (2024)</li>
+                <li><strong>Aprendizaje Profundo y Procesamiento de Lenguaje Natural</strong> - Universidad de la Rioja (2024)</li>
+                <li><strong>Computación Cognitiva y Percepción</strong> - Universidad de la Rioja (2023)</li>
+                <li><strong>Soft Skills y Habilidades Gerenciales</strong> - Universidad de la Rioja (2023)</li>
+                <li><strong>Implementación del Pensamiento Aritmético, Algebraico, Geométrico y Variacional</strong> - Universidad Tecnológica de Querétaro (2022)</li>
+                <li><strong>Desarrollo de Estrategias Digitales de Aprendizaje</strong> - Fundación Carlos Slim - PruebT (2020)</li>
+                <li><strong>Habilidades Digitales para la Docencia</strong> - Fundación Carlos Slim - PruebT (2021)</li>
+            </ul>
+        </section>
+        
+        <section class="section" id="publications">
+            <h2>Publicaciones y Logros</h2>
+            <h3>Artículos Publicados</h3>
+            <ul class="publications-list">
+                <li>"Experiencias de estudiantes de bachillerato al resolver una tarea de libro de texto y una tarea auténtica de trigonometría" - Revista Números</li>
+                <li>"Assessing the understanding of the slope concept in high school students" - Mathematics Teaching Research Journal</li>
+            </ul>
+            
+            <h3>Libros</h3>
+            <ul class="publications-list">
+                <li>"PENSAMIENTO MATEMATICO III" - Editorial: Excelencia Educativa serie Espirales de apendizaje. Orientado a Bachilleratos Tecnológicos en acuerdo con la NEM.</li>
+            </ul>
+            
+            <h3>Distinciones</h3>
+            <ul class="publications-list">
+                <li>Beneficiario a Becas Tesis - CONCYTEP 2021</li>
+                <li>Miembro activo de la Asociación Nacional de Profesores de Matemáticas A.C desde 2022 (ID: 202100281)</li>
+                <li>Ponente destacado en congresos nacionales e internacionales de Educación Matemática</li>
+            </ul>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Geovani Daniel Nolasco Negrete | Portfolio Profesional</p>
+    </footer>
+</body>
+</html>
